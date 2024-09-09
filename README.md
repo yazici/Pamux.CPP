@@ -131,3 +131,10 @@ Adding an existing project as submodule, so it is pulled and built automatically
 * CMake: Run without Debugging
 
     /home/baris/src/Pamux.CPP/builds/ninja-multi-vcpkg/Debug/PamuxCPP  (executable)
+
+# GitHub
+
+This is a [template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+
+Tip: You can also create a repository from a template using the GitHub CLI. For more information, see "gh repo create" in the GitHub CLI documentation.
+
