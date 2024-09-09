@@ -14,16 +14,19 @@
 
     sudo apt-get update
 
-    [Git WSL](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-git)
+[Git WSL Tutorial](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-git)
 
 Install Git:
     sudo apt-get install git
 
 Or Upgrade Git:
+
     sudo add-apt-repository ppa:git-core/ppa -y
     sudo apt-get update
     sudo apt-get upgrade
     sudo apt-get install git -y
+
+Make sure you installed the latest:
 
     git --version
 
@@ -32,25 +35,29 @@ Configure global git:
     git config --global user.name "yazici"
     git config --global user.email "yazici.b@gmail.com"
 
-For git > 2.39
+For git > 2.39:
+
     git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
 
+View your global config:
 
-See your global config:
     vi ~/.gitconfig
+
+Install other build, etc. tools:
 
     sudo apt-get install curl zip unzip tar
     sudo apt-get install pkg-config
     sudo apt-get install build-essential gdb
     sudo apt-get install ninja-build
+    sudo apt-get install ca-certificates gpg wget
 
+Install latest CMake (2.29.2 is required min version)
 [Latest CMake](https://apt.kitware.com/)
 
     # To create $DISTRIB_CODENAME env variable
     source /etc/lsb-release
-    KEYRING_PATH=/usr/share/keyrings/kitware-archive-keyring.gpg
 
-    sudo apt-get install ca-certificates gpg wget
+    KEYRING_PATH=/usr/share/keyrings/kitware-archive-keyring.gpg
 
     test -f /usr/share/doc/kitware-archive-keyring/copyright || wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | sudo tee $KEYRING_PATH >/dev/null
 
@@ -70,6 +77,8 @@ See your global config:
 ## vcpkg
 [VCPKG Overview](https://learn.microsoft.com/en-us/vcpkg/get_started/overview)
 
+
+Adding an existing project as submodule, so it is pulled and built automatically:
 
     cd ~/src/Pamux.CPP
     git submodule add https://github.com/microsoft/vcpkg
@@ -121,4 +130,4 @@ See your global config:
 
 * CMake: Run without Debugging
 
-    /home/baris/src/Pamux.CPP/builds/ninja-multi-vcpkg/Debug/PamuxCPP
+    /home/baris/src/Pamux.CPP/builds/ninja-multi-vcpkg/Debug/PamuxCPP  (executable)
