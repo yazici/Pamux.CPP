@@ -43,6 +43,10 @@ View your global config:
 
     vi ~/.gitconfig
 
+GitHub CLI:
+
+    sudo apt  install gh
+
 Install other build, etc. tools:
 
     sudo apt-get install curl zip unzip tar
@@ -50,6 +54,7 @@ Install other build, etc. tools:
     sudo apt-get install build-essential gdb
     sudo apt-get install ninja-build
     sudo apt-get install ca-certificates gpg wget
+
 
 Install latest CMake (2.29.2 is required min version)
 [Latest CMake](https://apt.kitware.com/)
